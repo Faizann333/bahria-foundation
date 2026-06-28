@@ -6,15 +6,45 @@ import { motion, AnimatePresence } from "framer-motion";
 const categories = ["All", "Campus", "Events", "Sports", "Labs"];
 
 const galleryItems = [
-  { id: 1, category: "Campus", src: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1000", alt: "Main Building" },
-  { id: 2, category: "Labs", src: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=1000", alt: "Science Lab" },
-  { id: 3, category: "Events", src: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1000", alt: "Convocation" },
-  { id: 4, category: "Sports", src: "https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=1000", alt: "Football Match" },
-  { id: 5, category: "Campus", src: "https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=1000", alt: "Library" },
-  { id: 6, category: "Events", src: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1000", alt: "Debate" },
-  { id: 7, category: "Labs", src: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1000", alt: "Computer Lab" },
-  { id: 8, category: "Campus", src: "https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?q=80&w=1000", alt: "Cafeteria" },
-  { id: 9, category: "Sports", src: "https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=1000", alt: "Cricket Ground" },
+  // Main cover images
+  { id: 1, category: "Events", src: "https://bfc-wah.netlify.app/1.jpg", alt: "Qirat and Azan competition" },
+  { id: 2, category: "Events", src: "https://bfc-wah.netlify.app/seerat.jpg", alt: "Seerat-un-Nabi Conference" },
+  { id: 3, category: "Campus", src: "https://bfc-wah.netlify.app/alumni.jpg", alt: "BFC's first Alumni" },
+  { id: 4, category: "Events", src: "https://bfc-wah.netlify.app/ps%20sol.jpg", alt: "Positive Solutions & BFC" },
+  
+  // Qirat and Azan competition images
+  { id: 5, category: "Events", src: "https://bfc-wah.netlify.app/2.jpg", alt: "Qirat and Azan Event 2" },
+  { id: 6, category: "Events", src: "https://bfc-wah.netlify.app/3.jpg", alt: "Qirat and Azan Event 3" },
+  { id: 7, category: "Events", src: "https://bfc-wah.netlify.app/4.jpg", alt: "Qirat and Azan Event 4" },
+  { id: 8, category: "Events", src: "https://bfc-wah.netlify.app/5.jpg", alt: "Qirat and Azan Event 5" },
+  { id: 9, category: "Events", src: "https://bfc-wah.netlify.app/6.jpg", alt: "Qirat and Azan Event 6" },
+  { id: 10, category: "Events", src: "https://bfc-wah.netlify.app/7.jpg", alt: "Qirat and Azan Event 7" },
+  { id: 11, category: "Events", src: "https://bfc-wah.netlify.app/8.jpg", alt: "Qirat and Azan Event 8" },
+  { id: 12, category: "Events", src: "https://bfc-wah.netlify.app/9.jpg", alt: "Qirat and Azan Event 9" },
+  { id: 13, category: "Events", src: "https://bfc-wah.netlify.app/10.jpg", alt: "Qirat and Azan Event 10" },
+
+  // Seerat Conference images
+  { id: 14, category: "Events", src: "https://bfc-wah.netlify.app/a.jpg", alt: "Seerat Conference a" },
+  { id: 15, category: "Events", src: "https://bfc-wah.netlify.app/b.jpg", alt: "Seerat Conference b" },
+  { id: 16, category: "Events", src: "https://bfc-wah.netlify.app/c.jpg", alt: "Seerat Conference c" },
+  { id: 17, category: "Events", src: "https://bfc-wah.netlify.app/d.jpg", alt: "Seerat Conference d" },
+  { id: 18, category: "Events", src: "https://bfc-wah.netlify.app/e.jpg", alt: "Seerat Conference e" },
+  { id: 19, category: "Events", src: "https://bfc-wah.netlify.app/f.jpg", alt: "Seerat Conference f" },
+  { id: 20, category: "Events", src: "https://bfc-wah.netlify.app/g.jpg", alt: "Seerat Conference g" },
+  { id: 21, category: "Events", src: "https://bfc-wah.netlify.app/i.jpg", alt: "Seerat Conference i" },
+  { id: 22, category: "Events", src: "https://bfc-wah.netlify.app/j.jpg", alt: "Seerat Conference j" },
+
+  // Alumni images
+  { id: 23, category: "Campus", src: "https://bfc-wah.netlify.app/aa.jpg", alt: "Alumni aa" },
+  { id: 24, category: "Campus", src: "https://bfc-wah.netlify.app/bb.jpg", alt: "Alumni bb" },
+  { id: 25, category: "Campus", src: "https://bfc-wah.netlify.app/cc.jpg", alt: "Alumni cc" },
+  { id: 26, category: "Campus", src: "https://bfc-wah.netlify.app/dd.jpg", alt: "Alumni dd" },
+  { id: 27, category: "Campus", src: "https://bfc-wah.netlify.app/ee.jpg", alt: "Alumni ee" },
+  { id: 28, category: "Campus", src: "https://bfc-wah.netlify.app/ff.jpg", alt: "Alumni ff" },
+  { id: 29, category: "Campus", src: "https://bfc-wah.netlify.app/gg.jpg", alt: "Alumni gg" },
+  { id: 30, category: "Campus", src: "https://bfc-wah.netlify.app/hh.jpg", alt: "Alumni hh" },
+  { id: 31, category: "Campus", src: "https://bfc-wah.netlify.app/ii.jpg", alt: "Alumni ii" },
+  { id: 32, category: "Campus", src: "https://bfc-wah.netlify.app/jj.jpg", alt: "Alumni jj" },
 ];
 
 export default function GalleryPage() {
