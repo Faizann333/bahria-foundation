@@ -9,7 +9,7 @@ import { Stats } from "@/components/sections/Stats";
 
 export default function Home() {
   return (
-    <div className="flex flex-col w-full overflow-hidden">
+    <div className="flex flex-col w-full overflow-x-hidden">
       <Hero />
       <AboutPreview />
       <ProgramsCarousel />
